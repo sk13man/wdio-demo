@@ -1,20 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 declare namespace WebdriverIO {
-//   interface Config {
-//   }
-
-//   interface Element {
-//   }
-
   interface Browser {
-      customConfig: () => any;
-  }
-
-  interface BrowserMetrics {
-    firstMeaningfulPaint?: () => number;
-    firstInteractive?: () => number;
-    speedIndex?: () => number;
+    customConfig: () => any;
   }
 }
 
-declare module '@wdio/logger'
+declare module "@wdio/logger";
