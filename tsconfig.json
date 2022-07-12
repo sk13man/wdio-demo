@@ -1,19 +1,24 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
-      "target": "ES2018",
-      "baseUrl": ".",
-      "paths": {
-          "*": [ "./*" ],
-      },
-      "types": ["node", "@wdio/sync", "@wdio/mocha-framework", "@wdio/devtools-service", "./types/wdio"]
-  },    
-  "include": [
-      "./.eslintrc.js",
-      "./src/**/*.ts",
-      "./config/**/*.ts",
-      "./test/**/*.ts"
-  ],
-  "exclude": [
-    "./node_modules"
-  ]
+    "target": "esnext",
+    "module": "CommonJS",
+    "allowJs": true,
+    "outDir": "compiled",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "esnext"],
+    "types": ["node", "webdriverio/sync", "@wdio/jasmine-framework"]
+  },
+  "include": ["./tests/*.ts", "./config/*.ts", "./pages/*.ts"],
+  "exclude": ["node_modules"]
 }
