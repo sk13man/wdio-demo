@@ -6,7 +6,7 @@ export const config: WebdriverIO.Config = {
   connectionRetryTimeout: 90000,
   connectionRetryCount: 1,
   framework: "jasmine",
-  logLevel: "warn",
+  logLevel: "silent",
   reporters: ["spec"],
   maxInstances: 1,
   specFileRetries: 0,

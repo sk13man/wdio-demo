@@ -2,7 +2,7 @@ import BasePage from "./base.page";
 
 class Google extends BasePage {
   open() {
-    super.open("https://www.google.com/");
+    super.open("https://www.bing.com/");
   }
   search(value: string) {
     this.searchInput.setValue("");
@@ -16,11 +16,15 @@ class Google extends BasePage {
   resultsNum() {
     return this.searchResultsContainer.length;
   }
+  clickFirst() {
+    this.searchResultsContainer[0].$(".b_topTitle").click();
+    browser.pause(3000);
+  }
   private get searchResultsContainer() {
-    return $$("[data-sokoban-container]");
+    return $$('[id="b_results"] .b_algo');
   }
   private get searchInput() {
-    return $('[title="Search"]');
+    return $('[type="search"]');
   }
 }
 
