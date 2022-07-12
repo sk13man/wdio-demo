@@ -1,7 +1,4 @@
 import type { Options } from "@wdio/types";
-/* eslint-disable @typescript-eslint/no-unused-vars */
-const getLogger = require("@wdio/logger").default;
-const log = getLogger("hooks");
 
 export const config: Options.Testrunner = {
   autoCompileOpts: {
@@ -35,7 +32,7 @@ export const config: Options.Testrunner = {
     defaultTimeoutInterval: 60000,
     expectationResultHandler: function (passed, assertion) {
       if (!passed) {
-        log.error("Test has failed with result = >  " + assertion);
+        console.log("Test has failed with result = >  " + assertion);
       }
       // do something
     },

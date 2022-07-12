@@ -1,10 +1,10 @@
 {
-  "name": "wdio-mocha-typescript",
+  "name": "demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio config/wdio.conf.ts",
+    "test": "npx wdio wdio.conf.ts",
     "eslint": "npx eslint ."
   },
   "repository": {
@@ -23,12 +23,11 @@
     "@wdio/local-runner": "^7.20.5",
     "@wdio/mocha-framework": "7.20.3",
     "@wdio/spec-reporter": "^7.20.3",
-    "@wdio/sync": "7.20.5",
     "chromedriver": "^103.0.0",
     "eslint": "8.19.0",
     "ts-node": "^10.8.2",
     "tsconfig-paths": "4.0.0",
-    "typescript": "4.7.4",
+    "typescript": "^4.7.4",
     "wdio-chromedriver-service": "^7.3.2"
   },
   "dependencies": {

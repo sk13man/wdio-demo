@@ -1,5 +1,5 @@
 import { describe, it } from "mocha";
-import homePage from "pages/home.page";
+import homePage from "./pageobjects/home.page";
 
 describe("Google suite demo", () => {
   it("open homepage and start search", () => {
